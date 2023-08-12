@@ -24,7 +24,13 @@ export function AppProvider({children}){
   const onSortSelectionListener = (e) =>{
     setSelectedSortState(e.target.value)
   }
+
+  const addNewItemDetails = (newItem) =>{
+    console.log(445, newItem)
+     setData([...data, newItem])
+  }
+  console.log(data)
     return(
-        <AppContext.Provider value={{data, departments, onSelectionChange, isLow, setIsLow, onCheckBoxChangeListener, selectedSortState, selectedDepartmentState,  setSelectedSortState,onSortSelectionListener, setSelectedDepartmentState }}>{children}</AppContext.Provider>
+        <AppContext.Provider value={{data, departments, onSelectionChange, isLow, setIsLow, onCheckBoxChangeListener, selectedSortState, selectedDepartmentState,  setSelectedSortState,onSortSelectionListener, setSelectedDepartmentState, addNewItemDetails }}>{children}</AppContext.Provider>
     )
 }
