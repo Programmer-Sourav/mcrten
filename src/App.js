@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Link to="/">Home</Link>
       <Link to="/department">Departments</Link>
-      <Link to="/listing/:id">Products</Link>
+      <Link to="/listing/All">Products</Link>
      <Routes>
      <Route path='/' element={<Home/>}>Home</Route>
       <Route path='/department' element={<Depertment/>}>Departments</Route>
