@@ -8,13 +8,24 @@ export default function ProductDetails(){
      const { id } = useParams()
 
      function findDescription(){
-      const result = data.find((dataItem)=>(dataItem.id===id))
+      return data.find((dataItem)=>(dataItem.id.toString()===id))
+      
      }
      const filteredList = findDescription()
 
     return(
         <div>
-
+           {
+            <ul>
+            <h1>{filteredList.name}</h1>
+            <p><img src={filteredList.imageUrl} width="128" height="128" alt="productimgf"/> </p>
+            <p> <span>Price: {filteredList.price}</span></p>
+            <p><span>Department: {filteredList.department}</span></p>
+            <p><span>Description: {filteredList.description}</span></p>
+            <p><span>Stock: {filteredList.stock}</span></p>
+            <p><span>SKU: {filteredList.sku}</span></p>
+            </ul>
+           }
         </div>
     )
 }
