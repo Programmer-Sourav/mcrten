@@ -5,7 +5,7 @@ import { useParams } from "react-router"
 
 export default function DepartmentProducts(){
 
-     const { data} = useContext(AppContext)
+     const { data, onSelectionChange } = useContext(AppContext)
      const { department } = useParams()
      const [selectedDepartmentState, setSelectedDepartmentState] = useState("All")
 

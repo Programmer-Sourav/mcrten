@@ -10,7 +10,10 @@ export function AppProvider({children}){
   const departments = [{id: 1, department: "Kitchen"},{id: 2, department: "Clothing"},{id: 1, department: "Toys"}]
 
 
+  const onSelectionChange = () =>{
+
+  }
     return(
-        <AppContext.Provider value={{data, departments}}>{children}</AppContext.Provider>
+        <AppContext.Provider value={{data, departments, onSelectionChange }}>{children}</AppContext.Provider>
     )
 }
