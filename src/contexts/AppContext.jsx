@@ -1,12 +1,16 @@
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
+import { inventoryData } from "../data/api";
 
 export const AppContext = createContext()
 
 
 export function AppProvider({children}){
 
+  const [data, setData ] = useState(inventoryData)
+  const departments = [{id: 1, department: "Kitchen"},{id: 2, department: "Clothing"},{id: 1, department: "Toys"}]
+
 
     return(
-        <AppContext.Provider value={{}}>{children}</AppContext.Provider>
+        <AppContext.Provider value={{data, departments}}>{children}</AppContext.Provider>
     )
 }
