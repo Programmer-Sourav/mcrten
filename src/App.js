@@ -7,6 +7,7 @@ import ProductDetails from './pages/ProductDetails';
 import Depertment from './pages/Departments';
 import Departments from './pages/Departments';
 import DepartmentProducts from './pages/DepartmentProducts';
+import AddPage from './pages/AddPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/department' element={<Depertment/>}>Departments</Route>
       <Route path='/details/:id' element={<ProductDetails/>}>Details</Route>
       <Route path='/listing/:department' element={<DepartmentProducts/>} />
+      <Route path='/add' element={<AddPage/>}/>
      </Routes>
     </div>
   );
