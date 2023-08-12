@@ -1,7 +1,13 @@
-export default function ListCard({data}){
+import { useNavigate } from "react-router"
 
+export default function ListCard({data}){
+    const navigate = useNavigate()
+
+    const openDetailsPage = (id) =>{
+        navigate(`/details/${id}`)
+    }
     return(
-        <div>
+        <div onClick={()=>{openDetailsPage(data.id)}}>
             {
                 <ul>
                 <img src={data.imageUrl} height="128" width="72" alt="productitem"/>
